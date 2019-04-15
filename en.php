@@ -1,8 +1,14 @@
 <?php
 session_start();
+
 if (isset($_SESSION['en']) == true) {
-    echo "Hello mr. Afanasiy";
+    echo "HELLO Afanasiy";
 } else {
-    echo "у вас нет доступа";
+    if (isset($_SESSION['many']) != true)
+        echo "у вас нет доступа";
+}
+
+if (isset($_SESSION['many']) == true) {
+    echo "HELLO SASHA";
 }
 ?>
